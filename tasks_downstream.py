@@ -50,10 +50,7 @@ ODOO_VERSION = float(
 # Depending on the user's docker version either version of docker compose could not
 # be available. We default to v2 and fallback to v1.
 
-docker_compose_v2 = (
-    subprocess.run([shutil.which("docker"), "compose"], capture_output=True).returncode
-    == 0
-)
+docker_compose_v2= False
 DOCKER_COMPOSE_CMD = (
     f"{shutil.which('docker')} compose"
     if docker_compose_v2
