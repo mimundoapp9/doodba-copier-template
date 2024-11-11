@@ -32,9 +32,9 @@ _skip_if_exists:
   - odoo/custom/src/repos.yaml
   - odoo/custom/ssh/*
 
-_tasks:
-  - invoke after-update
-  - invoke develop
+# _tasks:
+#   - invoke after-update
+#   - invoke develop
 
 _migrations:
   - version: v1.0.0
